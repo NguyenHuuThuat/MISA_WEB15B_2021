@@ -1,0 +1,260 @@
+#content{
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    right: 0px;
+    bottom: 0px;
+    background-color: whitesmoke;
+    border-left: 1px solid #adadad;
+    border-top: 1px solid #c4c5c4;
+    /* overflow: hidden; */
+}
+
+/* pretop */
+#content .pretop{
+    background-color: whitesmoke;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+    .pretop .pretop-text{
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .pretop .pretop-button{
+        width: 165px;
+        height: 36px;
+        background-color: #01B075;
+        /* margin-left: 950px; */
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        transition: 0.5s;
+        position: absolute;
+        right: 10px;
+    }
+    .pretop .pretop-button:hover{
+        cursor: pointer;
+        background-color: #019160;
+    }
+    .pretop .pretop-button .icon-add{
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/icon/add.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .pretop .pretop-button .text-add{
+        font-size: 13px;
+        color: #ffff;
+    }
+
+/* top */
+#content .top{
+    height: 50px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+    .top .top-search{
+        height: 30px;
+        width: 200px;
+        border: 1px solid #adadad;
+        background-color: white;
+        margin-left: 20px;
+        display: flex;
+        border-radius: 5px;
+    }
+        .top-search button{
+            width: 30px;
+            height: 28px;
+            border: none;
+            background-color: white;
+            border-radius: 5px;
+            color: rgb(168, 165, 168);
+            outline: none;
+        }
+        .top-search button:hover{
+            cursor: pointer;
+            color: black;
+        }
+        .top-search input{
+            height: 28px;
+            width: 170px;
+            border: none;
+            background-color: white;
+            border-radius: 5px;
+            outline: none;
+        }
+        .top-search input:hover{
+            border: none;
+        }
+        .top-search ::placeholder{
+            font-size: 12px;
+        }
+        .top-search:hover ::placeholder{
+            font-size: 0px;
+        }
+
+    .top-sort-list{
+        height: 30px;
+        width: 250px;
+        margin-left: 20px;
+        border: 1px solid #adadad;
+        background-color: white;
+        border-radius: 5px;
+        color: #585555;
+    }
+    .top-sort-list:hover{
+        cursor: pointer;
+        color: #000;
+        border: 1px solid #000;
+    }
+        
+        .top .btn-delete{
+            width: 120px;
+            height: 30px;
+            border: 1px solid #adadad;
+            border-radius: 5px;
+            /* margin-left: 1070px; */
+            background-color: #01B075;
+            position: absolute;
+            right: 55px;
+            transition: 0.5s;
+            font-size: 13px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .top .btn-delete:hover{
+            cursor: pointer;
+            background-color: #019160;
+        }
+        .top .top-refresh{
+            width: 40px;
+            height: 30px;
+            border: 1px solid #adadad;
+            font-size: 18px;
+            /* background-image: url("../../assets/icon/refresh.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px; */
+            color: #BBBBBB;
+            /* margin-left: 1070px; */
+            background-color: white;
+            position: absolute;
+            right: 10px;
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .top .top-refresh:hover{
+            cursor: pointer;
+            background-color: #019160;
+            color: #ffff;
+            
+        }
+
+/* mid */
+#content .mid{
+    height: calc(100% - 175px);
+    /* overflow: scroll; */
+}
+
+#content .mid .grid table{
+    width: calc(100% - 25px);
+    margin: 15px;
+    border-collapse: collapse;
+
+}
+    .mid .grid table thead{
+        text-align: left;
+        /* position: sticky; */
+    }
+    .mid .grid table td, th{
+        padding: 8px;
+        border-bottom: 1px solid #8b8686;
+    }
+    .mid .grid table tr:hover{
+        cursor: pointer;
+        background-color: rgb(215, 219, 219);
+    }
+
+/* bot */
+#content .bot{
+    height: 55px;
+    background-color: whitesmoke;
+    border-top: 5px solid #969292;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 20px);
+}
+
+    .bot .bot-left{
+        margin-left: 15px;
+    }
+
+    .bot .bot-mid{
+        width: 250px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        justify-content: space-between;
+    }
+        .bm-left{
+            width: 50px;
+            display: flex;
+            justify-content: space-around;
+            color: rgb(112, 108, 108);
+        }
+        .bm-left i:hover{
+            cursor: pointer;
+            color: black;
+        }
+        .bm-mid{
+            width: 110px;
+            display: flex;
+            justify-content: space-between;
+        }
+            .bm-mid-box{
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgb(153, 153, 146);
+                border-radius: 10px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: gainsboro;
+            }
+            .bm-mid-box:hover{
+                cursor: pointer;
+                background-color: rgb(27, 109, 48);
+                color: #fff;
+            }
+        .bm-right{
+            width: 50px;
+            display: flex;
+            justify-content: space-around;
+            color: rgb(112, 108, 108);
+        }
+        .bm-right i:hover{
+            cursor: pointer;
+            color: #000;
+        }
+
+    .bot .bot-right{
+        margin-right: 15px;
+    }
