@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/layout/header.css" rel="stylesheet" />
+    <link href="../css/layout/content.css" rel="stylesheet" />
+    <link href="../css/layout/navbar.css" rel="stylesheet" />
+    <link href="../css/page/customer.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Navbar-->
+    <div id="navbar">
+        <div class="logo-box">
+            <div class="sidebar"></div>
+            <div class="logo"></div>
+        </div>
+        <div class="navbar-box">
+            <a class="navbar-item">
+                <div class="navbar-icon icon-dashboard"></div>
+                <div class="navbar-text">Tổng quan</div>
+            </a>
+            <a class="navbar-item">
+                <div class="navbar-icon icon-report"></div>
+                <div class="navbar-text">Báo cáo</div>
+            </a>
+            <a class="navbar-item">
+                <div class="navbar-icon icon-dashboard"></div>
+                <div class="navbar-text">Mua hàng</div>
+            </a>
+            <a class="navbar-item" href="#">
+                <div class="navbar-icon icon-dic-employee"></div>
+                <div class="navbar-text">Danh sách nhân viên</div>
+            </a>
+            <a class="navbar-item" href="#">
+                <div class="navbar-icon icon-dic-employee"></div>
+                <div class="navbar-text">Danh mục nhân viên</div>
+            </a>
+            <a class="navbar-item">
+                <div class="navbar-icon icon-setting"></div>
+                <div class="navbar-text">Thiết lập hệ thống</div>
+            </a>
+
+        </div>
+    </div>
+    <div id="header">
+        <div class="heading">
+            Nhà hàng Biển Đông
+        </div>
+        <div class="user-info">
+            <div class="user-icon"></div>
+            <div class="user-name">Nguyễn Hữu Thuật</div>
+            <div class="user-more"></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="page-title">
+            <div class="page-left">Danh sách nhân viên</div>
+            <div class="page-right">
+                <button id="btnAdd" class="btn-default">Thêm nhân viên</button>
+            </div>
+        </div>
+        <div class="toolbar">
+            <input type="text" class="input-search" style="width: 220px;" placeholder="Tìm kiếm theo mã, tên khách hàng" />
+            <select class="select-department" style="width: 220px;margin-left: 5px; margin-top: 0px;">
+                <option>Tất cả phòng ban</option>
+                <option>Phòng Marketting</option>
+                <option>Phòng Nhân sự</option>
+                <option>Phòng Đào tạo</option>
+                <option>Phòng Công nghệ</option>
+            </select>
+            <select class="select-position" style="width: 220px;margin-left: 5px; margin-top: 0px;">
+                <option>Tất cả vị trí</option>
+                <option>Giám đốc</option>
+                <option>Thu ngân</option>
+                <option>Nhân viên Marketting</option>
+                <option>Kỹ sư</option>
+            </select>
+            <button class="btn-refresh"></button>
+            <button class="btn-trash"></button>
+        </div>
+        <div class="grid">
+            <table id="tblListCustomer" class="table" width="100%" border="0">
+                <thead>
+                    <tr>
+                        <th>Mã nhân viên</th>
+                        <th>Họ và tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th>Chức vụ</th>
+                        <th>Phòng ban</th>
+                        <th>Số CMTND</th>
+                        <th>Nơi cấp</th>
+                        <th>Mức lương cơ bản</th>
+                        <th>Xóa</th>           
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>KH0001</td>
+                        <td>Nguyễn Hữu Thuật</td>
+                        <td>Nam</td>
+                        <td>22/09/1999</td>
+                        <td>VIP</td>
+                        <td>034058928</td>
+                        <td>abv@gmail.com</td>
+                        <td  class="text-align-right">1.025.000</td>
+        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="paging">
+            <div data-v-a72348a4="" class="paging-bar"><div data-v-a72348a4="" class="paging-record-info">Hiển thị <b data-v-a72348a4="">1-10/1000</b> nhân viên</div><div data-v-a72348a4="" class="paging-option"><div data-v-a72348a4="" class="btn-select-page m-btn-firstpage"></div><div data-v-a72348a4="" class="btn-select-page m-btn-prev-page"></div><div data-v-a72348a4="" class="m-btn-list-page"><button data-v-a72348a4="" class="btn-pagenumber btn-pagenumber-selected">1</button><button data-v-a72348a4="" class="btn-pagenumber">2</button><button data-v-a72348a4="" class="btn-pagenumber">3</button><button data-v-a72348a4="" class="btn-pagenumber">4</button></div><div data-v-a72348a4="" class="btn-select-page m-btn-next-page"></div><div data-v-a72348a4="" class="btn-select-page m-btn-lastpage"></div></div><div data-v-a72348a4="" class="paging-record-option"><b data-v-a72348a4="">10</b> nhân viên/trang</div></div>
+        </div>
+    </div>
+
+    <div id="dlgCustomerDetail" class="dialog dialog-hide">
+        <div class="model"></div>
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <div class="dialog-title">THÔNG TIN NHÂN VIÊN</div>
+                <div class="dialog-close-button">&#x2715;</div>
+            </div>
+            <div class="dialog-body m-row">
+                <div class="avatar">
+                    <div class="img-avatar"></div>
+                    <div class="text-avatar">Vui lòng chọn ảnh có định dạng</div>
+                    <div class="kindtext-avatar">.jpg, .jpeg, .png, .gif.</div>
+                </div>
+                <div class="content">
+                    <div class="m-row">
+                        <div class="m-col title-heading">A. THÔNG TIN CHUNG</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label class="masv">Mã nhân viên(<span class="icon">*</span>)</label>
+                            <input id="txtCustomerCode" type="text" required/>
+                        </div>
+                        <div class="m-col">
+                            <label>Họ và tên(<span class="icon">*</span>)</label>
+                            <input id="txtFullName" type="text" required/>
+                        </div>
+                    </div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label>Ngày sinh</label>
+                            <input id="dtDateOfBirth" type="date" />
+                        </div>
+                        <div class="m-col">
+                            <label>Giới tính</label>
+                            <select id='cbGender'>
+                                <option value="1">Nam</option>
+                                <option value="0">Nữ</option>
+                                <option value="2">Không xác định</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label>Số CMTND/Căn cước(<span class="icon">*</span>)</label>
+                            <input id="txtIdentify" type="text" required/>
+                        </div>
+                        <div class="m-col">
+                            <label>Ngày cấp</label>
+                            <input id="dateStart" type="date" />
+                        </div>
+                    </div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label>Nơi cấp</label>
+                            <input id="addres" type="text" />
+                        </div>
+                    </div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label>Số điện thoại(<span class="icon">*</span>)</label>
+                            <input id="txtPhoneNumber" type="text" required/>
+                        </div>
+                        <div class="m-col">
+                            <label>Email(<span class="icon">*</span>)</label>
+                            <input id="txtEmail" type="text" required/>
+                        </div>
+                    </div>
+                    <!--<div class="m-row">
+                        <div class="m-col">
+                            <label>Nhóm khách hàng</label>
+                            <select id="cbCustomerGroup">
+                                <option value="0cb5da7c-59cd-4953-b17e-c9adc9161663">Nhóm khách hàng MISA</option>
+                                <option value="19165ed7-212e-21c4-0428-030d4265475f">Khách VIP</option>
+                                <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Khách vãng lai</option>
+                                <option value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">Khách thường</option>
+                            </select>
+                        </div>
+                    </div>-->
+                    <div class="m-row">
+                        <div class="m-col title-heading">B. THÔNG TIN CÔNG VIỆC</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label>Vị trí</label>
+                            <select id="position">
+                                <option>Tất cả vị trí</option>
+                                <option>Giám đốc</option>
+                                <option>Thu ngân</option>
+                                <option>Nhân viên Marketting</option>
+                            </select>
+                        </div>
+                        <div class="m-col">
+                            <label>Phòng ban</label>
+                            <select id="cbCustomerGroup">
+                                <option>Phòng Marketting</option>
+                                <option>Phòng Nhân sự</option>
+                                <option>Phòng Đào tạo</option>
+                                <option>Phòng Công nghệ"</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label>Mã số thuế cá nhân</label>
+                            <input id="codeOfPerson" type="text" />
+                        </div>
+                        <div class="m-col">
+                            <label>Mức lương cơ bản</label>
+                            <input id="baseOfSalary" type="text" placeholder="2.000.000 (VNĐ)" />
+                        </div>
+                    </div>
+                    <div class="m-row">
+                        <div class="m-col">
+                            <label>Ngày gia nhập công ty</label>
+                            <input id="dateJoinCompany" type="date" />
+                        </div>
+                        <div class="m-col">
+                            <label>Tình trạng công việc</label>
+                            <select id="cbCustomerGroup">
+                                <option>Đang làm việc</option>
+                                <option>Đã nghỉ</option>
+                                <option>Khách vãng lai</option>
+                                <option>Khách thường</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="dialog-footer">
+                <button id="btnSave" class="btn-default">Lưu</button>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/page/customer.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿.dialog .model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: .4;
+}
+
+    .dialog .dialog-content {
+        padding: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 700px;
+        height: 520px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        /*padding-bottom: 100px;*/
+        overflow-y: scroll;
+    }
+
+    .dialog .dialog-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .dialog .dialog-close-button {
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 0 4px 0 4px;
+    }
+
+        .dialog .dialog-close-button:hover {
+            background-color: #bbb;
+            cursor: pointer;
+        }
+
+.dialog-hide {
+    display: none;
+}
+
+
+.dialog .dialog-footer {
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    /*background-color: #e5e5e5;*/
+    height: 56px;
+    border-radius: 0 0 4px 4px;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+}
+
+.dialog .dialog-footer button{
+    position: absolute;
+    right: 24px;
+}
+.avatar {
+    width: 200px;
+    height: 100%;
+}
+.content{
+    width: 70%;
+}
+.img-avatar {
+    cursor: pointer;
+    /*margin-top: 10px;*/
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    border: 1px solid #bebebe;
+    background-image: url('../../content/img/default-avatar.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.text-avatar {
+    font-size: 11px;
+    text-align: center;
+}
+.kindtext-avatar {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
